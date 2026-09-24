@@ -1,0 +1,2148 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://tgm-informationstechnologie.github.io/syt-exercises-public/2nd%20year/Ber%C3%BChrungssensor/TASK.html">
+      
+      
+        <link rel="prev" href="PreRead.html">
+      
+      
+        <link rel="next" href="../Kondensator/Attachments.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Berührungssensor - SYT-Exercises</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#beruhrungssensor" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="SYT-Exercises" class="md-header__button md-logo" aria-label="SYT-Exercises" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SYT-Exercises
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Berührungssensor
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="SYT-Exercises" class="md-nav__button md-logo" aria-label="SYT-Exercises" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SYT-Exercises
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Willkommen zu "Systemtechnik"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2nd year
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2nd year
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Berührungssensor
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Berührungssensor
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Attachments.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attachments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="PreRead.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PreRead
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Berührungssensor
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="TASK.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Berührungssensor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Einführung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ziele
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kompetenzzuordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kompetenzzuordnung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kompetenzzuordnung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gk-syt3-elektronik-digitaltechnik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GK SYT3 Elektronik - Digitaltechnik
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voraussetzungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voraussetzungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detaillierte-aufgabenbeschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detaillierte Aufgabenbeschreibung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detaillierte Aufgabenbeschreibung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aufgabe-grundkompetenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufgabe Grundkompetenz
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aufgabe Grundkompetenz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teil-1-grundlagen-verstehen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 1 – Grundlagen verstehen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teil-2-beruhrungssensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 2 – Berührungssensors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teil-3-untersuchung-der-darlington-schaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 3 – Untersuchung der Darlington-Schaltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teil-4-reflexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 4 – Reflexion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aufgabe-erweiterte-kompetenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufgabe Erweiterte Kompetenz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fragestellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fragestellungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abgabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgabe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bewertung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bewertung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bewertung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grundanforderungen-uberwiegend-erfullt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundanforderungen überwiegend erfüllt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grundanforderungen-zur-ganze-erfullt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundanforderungen zur Gänze erfüllt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-read-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-Read Material
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attachments
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kondensator
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Kondensator
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kondensator/Attachments.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attachments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kondensator/PreRead.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PreRead
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kondensator/TASK.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versuche mit Kondensatoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wiederholung
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Wiederholung
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Wiederholung/Attachments.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attachments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Wiederholung/PreRead.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PreRead
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Wiederholung/TASK%20-%20LEDS.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versuche mit LEDs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3rd year
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3rd year
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Semesterprojekt ESP 32
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Semesterprojekt ESP 32
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3rd%20year/Semesterprojekt%20ESP-32/Attachments.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attachments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3rd%20year/Semesterprojekt%20ESP-32/PreRead.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PreRead
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3rd%20year/Semesterprojekt%20ESP-32/TASK.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projektidee und Voraussetzungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cheat Sheets
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Cheat Sheets
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cheat%20Sheets/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Template
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Template
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Template/Attachments.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Attachments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Template/PreRead.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PreRead
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Template/Software.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Template/Template-JG1-TASK.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Name
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Template/Template-JG2-GG3-TASK.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise Title
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Einführung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ziele
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kompetenzzuordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kompetenzzuordnung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kompetenzzuordnung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gk-syt3-elektronik-digitaltechnik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GK SYT3 Elektronik - Digitaltechnik
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voraussetzungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Voraussetzungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#detaillierte-aufgabenbeschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Detaillierte Aufgabenbeschreibung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Detaillierte Aufgabenbeschreibung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aufgabe-grundkompetenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufgabe Grundkompetenz
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aufgabe Grundkompetenz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#teil-1-grundlagen-verstehen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 1 – Grundlagen verstehen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teil-2-beruhrungssensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 2 – Berührungssensors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teil-3-untersuchung-der-darlington-schaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 3 – Untersuchung der Darlington-Schaltung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teil-4-reflexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teil 4 – Reflexion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aufgabe-erweiterte-kompetenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufgabe Erweiterte Kompetenz
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fragestellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fragestellungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abgabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgabe
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bewertung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bewertung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bewertung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grundanforderungen-uberwiegend-erfullt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundanforderungen überwiegend erfüllt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#grundanforderungen-zur-ganze-erfullt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grundanforderungen zur Gänze erfüllt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quellen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-read-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-Read Material
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attachments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attachments
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+<h1 id="beruhrungssensor">Berührungssensor</h1>
+<h2 id="einfuhrung">Einführung</h2>
+<p><strong>Transistoren</strong> sind die wichtigsten Bauelemente moderner elektronischer Schaltungen. Sie können als Verstärker oder als Schalter verwendet werden.</p>
+<p>In dieser Übung wird ein Berührungssensor aufgebaut, der bereits auf kleinste elektrische Ströme reagiert.</p>
+<p>Zusätzlich wird untersucht, wie durch Transistoren digitale Schaltungen mit stabilen Zuständen realisiert werden können.</p>
+<h2 id="ziele">Ziele</h2>
+<ul>
+<li>die Funktionsweise eines NPN-Transistors erklären</li>
+<li>die Stromverstärkung eines Transistors beschreiben</li>
+<li>die Darlington-Schaltung erklären</li>
+<li>einen Berührungssensor aufbauen und dokumentieren</li>
+<li>den Unterschied zwischen analogen und digitalen Schaltungen erläutern</li>
+<li>die Funktionsweise eines bistabilen Flipflops beschreiben</li>
+</ul>
+<h2 id="kompetenzzuordnung">Kompetenzzuordnung</h2>
+<h4 id="gk-syt3-elektronik-digitaltechnik">GK SYT3 Elektronik - Digitaltechnik</h4>
+<ul>
+<li>"sequentielle Schaltungen der Digitaltechnik erklären und analysieren"</li>
+</ul>
+<h2 id="voraussetzungen">Voraussetzungen</h2>
+<ul>
+<li>Steckbrett</li>
+<li>9-V-Batterie</li>
+<li>2 × BC547 (NPN-Transistor)</li>
+<li>1 × LED</li>
+<li>Widerstände gemäß Schaltplan</li>
+<li>Verbindungsdrähte</li>
+</ul>
+<h2 id="detaillierte-aufgabenbeschreibung">Detaillierte Aufgabenbeschreibung</h2>
+<p>In dieser Übung baust du einen Berührungssensor auf und untersuchst dessen Funktionsweise. Die Schaltung verwendet zwei NPN-Transistoren in einer sogenannten Darlington-Schaltung. Durch die hohe Stromverstärkung reicht bereits der sehr kleine Strom, der über einen Finger fließt, aus, um eine LED einzuschalten. Die Übung zeigt anschaulich, wie Transistoren als Verstärker eingesetzt werden können.</p>
+<p><img src="Pictures\Berührungssensor Scheme.jpg" style="zoom:20%;" /></p>
+<h3 id="aufgabe-grundkompetenz">Aufgabe Grundkompetenz</h3>
+<h4 id="teil-1-grundlagen-verstehen">Teil 1 – Grundlagen verstehen</h4>
+<p>Bevor der Berührungssensor aufgebaut wird, ist es wichtig zu verstehen, warum ein Transistor kleine Ströme verstärken kann. Die Funktionsweise des Berührungssensors basiert genau auf diesem Prinzip. Die verwendeten BC547-Transistoren arbeiten dabei als Stromverstärker.</p>
+<blockquote>
+<p>Ein Transistor ist ein elektronisch gesteuerter Stromregler.</p>
+</blockquote>
+<p>Ein Transistor besitzt zwei Stromkreise:</p>
+<ul>
+<li>Steuerstromkreis (liegt zwischen Basis und Emitter): Hier fließt ein kleiner Basisstrom I<sub>B</sub>.</li>
+<li>Laststromkreis (liegt zwischen: Kollektor und Emitter): Hier fließt der größere Kollektorstrom I<sub>C</sub>.</li>
+</ul>
+<p>Der kleine Basisstrom steuert den deutlich größeren Kollektorstrom.</p>
+<p>Die wichtigste Eigenschaft eines Transistors ist die Stromverstärkung.</p>
+<p>Sie wird mit dem Symbol
+$$
+\beta
+$$
+oder
+$$
+h_{FE}
+$$
+bezeichnet.</p>
+<p>Die Stromverstärkung berechnet sich aus:
+$$
+\beta = \frac{I_C}{I_B}
+$$
+<strong>Beispiel</strong></p>
+<p>Ein BC547 besitzt eine Stromverstärkung von ungefähr:
+$$
+\beta = 300
+$$
+Fließen an der Basis
+$$
+I_B = 0,01 \, mA
+$$
+dann kann der Transistor ungefähr steuern:
+$$
+I_C = 300 \cdot 0,01mA
+$$
+Ein sehr kleiner Eingangsstrom ermöglicht also einen wesentlich größeren Ausgangsstrom.</p>
+<p>Lies das Kapitel<strong>„Transistoren“</strong> im Schulbuch <strong>Fachkunde Industrieelektronik und Informationstechnik (Europa Lehrmittel)</strong> sorgfältig durch und erstelle anschließend eine kurze Zusammenfassung (ca. ½ bis 1 Seite).</p>
+<p>Die Zusammenfassung soll folgende Punkte behandeln:</p>
+<ul>
+<li>Aufbau eines bipolaren Transistors</li>
+<li>Anschlüsse eines Transistors (Basis, Kollektor, Emitter)</li>
+<li>Unterschied zwischen NPN- und PNP-Transistor</li>
+<li>Funktionsweise eines Transistors als Verstärker</li>
+<li>Funktionsweise eines Transistors als Schalter</li>
+<li>Bedeutung der Stromverstärkung</li>
+<li>Typische Anwendungsgebiete von Transistoren in elektronischen Schaltungen</li>
+</ul>
+<h4 id="teil-2-beruhrungssensors">Teil 2 – Berührungssensors</h4>
+<p><strong>Strommfluss</strong></p>
+<p>Vervollständige die Schaltung mit Strom und Spannungsbezeichnungen (insb. Steuer- und Laststrom).</p>
+<p>Zeichne dazu im Schaltplan ein.</p>
+<p>Beantworte:</p>
+<ul>
+<li>Welche Aufgabe haben die beiden Transistoren?</li>
+<li>Welche Aufgabe hat der 470-kΩ-Widerstand?</li>
+<li>Warum schützt der Vorwiderstand die Schaltung?</li>
+</ul>
+<p><strong>Aufbau</strong></p>
+<p>Baue einen Berührungssensor als Schaltung auf. Verwende die angegebenen Bauteile und kontrolliere sorgfältig die Anschlüsse der beiden BC547-Transistoren. Die LED soll zunächst nicht leuchten.</p>
+<p>Dokumentiere den Aufbau durch:</p>
+<ul>
+<li>Schaltplan</li>
+<li>Foto der fertigen Schaltung</li>
+<li>Beschriftung der wichtigsten Bauteile</li>
+<li>Liste der verwendeten Bauteile</li>
+</ul>
+<p><strong>Funktionsprüfung</strong></p>
+<p>Berühre die beiden Sensorkontakte gleichzeitig mit einem Finger.</p>
+<p>Beobachte und dokumentiere:</p>
+<ul>
+<li>Leuchtet die LED?</li>
+<li>Wie schnell reagiert die Schaltung?</li>
+<li>Ändert sich die Helligkeit der LED?</li>
+</ul>
+<p>Führe anschließend weitere Versuche durch:</p>
+<ol>
+<li>Berührung mit trockenem Finger</li>
+<li>Berührung mit leicht feuchtem Finger</li>
+<li>Berührung mit zwei Fingern</li>
+<li>Direkte Verbindung der Kontakte mit einem Draht</li>
+<li>Berührung nur eines Kontakts</li>
+</ol>
+<p>Halte alle Beobachtungen schriftlich fest.</p>
+<p><strong>Analyse der Schaltung</strong></p>
+<p>Beschreibe in eigenen Worten die Aufgabe des Berührungssensors.</p>
+<p>Gehe dabei auf folgende Punkte ein:</p>
+<ul>
+<li>Welche Funktion erfüllt die Schaltung?</li>
+<li>Was passiert beim Berühren der Kontakte?</li>
+<li>Warum kann der menschliche Körper Bestandteil der Schaltung sein?</li>
+<li>Welche Aufgabe übernimmt die LED?</li>
+<li>Warum schaltet die LED erst bei Berührung ein?</li>
+</ul>
+<h4 id="teil-3-untersuchung-der-darlington-schaltung">Teil 3 – Untersuchung der Darlington-Schaltung</h4>
+<p>Der Berührungssensor verwendet zwei hintereinander geschaltete NPN-Transistoren. Diese Schaltungsart nennt man <strong>Darlington-Schaltung</strong>. Dabei wird der verstärkte Strom des ersten Transistors als Basisstrom für den zweiten Transistor verwendet. Dadurch vervielfacht sich die Stromverstärkung.</p>
+<p>Bearbeite folgende Fragestellungen:</p>
+<ul>
+<li>Was ist eine Darlington-Schaltung?</li>
+<li>Wie sind die beiden Transistoren miteinander verbunden?</li>
+<li>Warum wird die Stromverstärkung größer?</li>
+<li>Welche Vorteile ergeben sich daraus?</li>
+<li>Warum eignet sich diese Schaltung besonders für Sensoranwendungen?</li>
+<li>Welche Funktion hat der 470-kΩ-Widerstand?</li>
+</ul>
+<p><strong>Berechnung der Gesamtverstärkung</strong></p>
+<p>Beine einem Transistor vom Typ BC547 kann eine Stromverstärkung von etwa 300 angegenommen werden. Die Gesamtverstärkung einer Darlington-Schaltung ergibt sich durch Multiplikation der Einzelverstärkungen.</p>
+<p>Berechne:
+$$
+\beta_{ges} = \beta_1 \cdot \beta_2
+$$
+mit:
+$$
+\beta_1 = 300
+$$
+Beantworte anschließend:</p>
+<ul>
+<li>Wie groß ist die Gesamtverstärkung?</li>
+<li>Warum können dadurch sehr kleine Ströme erkannt werden?</li>
+<li>Welche Rolle spielt diese hohe Verstärkung für den Berührungssensor?</li>
+</ul>
+<h4 id="teil-4-reflexion">Teil 4 – Reflexion</h4>
+<p>Beantworte abschließend die folgenden Fragen:</p>
+<ul>
+<li>Warum genügt eine leichte Berührung zum Einschalten der LED?</li>
+<li>Welche Vorteile hat ein Berührungssensor gegenüber einem mechanischen Schalter?</li>
+<li>Welche Nachteile könnte ein Berührungssensor haben?</li>
+<li>Wo könnten solche Schaltungen in der Praxis eingesetzt werden?</li>
+<li>Welche Erkenntnisse über Transistoren hast du durch diese Übung gewonnen?</li>
+</ul>
+<h3 id="aufgabe-erweiterte-kompetenz">Aufgabe Erweiterte Kompetenz</h3>
+<p>Der Berührungssensor reagiert auf einen kleinen Strom, der durch den menschlichen Körper fließt. Mit kleinen Änderungen kann eine ähnliche Schaltung auch auf die Annäherung einer Hand oder auf Bewegungen in der Nähe reagieren. Im Kapitel „Bewegungsdetektor“ des Handbuchs "Grundkurs elektronik" wird dieses Prinzip durch eine zusätzliche Verstärkerstufe umgesetzt.</p>
+<p>Untersuche, wie aus dem Berührungssensor ein Näherungs- oder Bewegungsdetektor entwickelt werden kann.</p>
+<p>Lies das Kapitel<strong>„Bewegungsdetektor“</strong> im Handbuch Grundkurs Elektronik und beantworte folgende Fragen:</p>
+<ul>
+<li>Wie unterscheidet sich der Bewegungsdetektor vom Berührungssensor?</li>
+<li>Warum wird ein dritter Transistor eingesetzt?</li>
+<li>Welche Aufgabe hat der Sensordraht?</li>
+<li>Was versteht man unter elektrostatischen Feldern?</li>
+<li>Warum kann die Schaltung bereits auf eine Hand in der Nähe reagieren?</li>
+</ul>
+<p>Überlege, welche Änderungen notwendig wären, damit dein Berührungssensor bereits reagiert, wenn sich eine Hand in einem Abstand von einigen Zentimetern nähert.</p>
+<p>Diskutiere dabei:</p>
+<ul>
+<li>längerer Sensordraht</li>
+<li>größere Verstärkung</li>
+<li>zusätzliche Transistorstufe</li>
+<li>größere Metallfläche als Sensor</li>
+<li>mögliche Störquellen</li>
+</ul>
+<p>Beantworte zusätzlich folgende Transferfragen:</p>
+<ol>
+<li>Warum kann die Schaltung elektrische Felder wahrnehmen?</li>
+<li>Weshalb ist ein Näherungssensor empfindlicher als ein Berührungssensor?</li>
+<li>Welche Probleme können durch die hohe Empfindlichkeit entstehen?</li>
+<li>Wo werden berührungslose Sensoren im Alltag eingesetzt?</li>
+<li>Welche Vorteile haben Näherungssensoren gegenüber mechanischen Schaltern?</li>
+</ol>
+<p>Baue einen Bewegungsdetektor als Schaltung auf.</p>
+<h2 id="fragestellungen">Fragestellungen</h2>
+<ul>
+<li>Warum würde die LED ohne Transistoren nicht durch die Fingerberührung leuchten?</li>
+<li>Welche Unterschiede gibt es zwischen einem mechanischen Schalter und einem Berührungssensor?</li>
+<li>Nenne zwei praktische Anwendungen von Berührungssensoren.</li>
+<li>Welche Vor- und Nachteile besitzt ein Berührungssensor gegenüber einem Taster?</li>
+<li>Warum spricht man beim Berührungssensor von einer analogen Schaltung?</li>
+<li>Warum sind Transistoren wichtige Grundbausteine moderner Elektronik?</li>
+<li>Könnte die Schaltung auch als Bewegungs- oder Näherungssensor erweitert werden? Begründe deine Antwort.</li>
+<li>Erkläre in eigenen Worten, warum der Berührungssensor ohne die hohe Verstärkung der Darlington-Schaltung nicht funktionieren würde.</li>
+</ul>
+<h2 id="abgabe">Abgabe</h2>
+<p>Siehe allgemeine Abgaberegeln.</p>
+<p>Die durchgeführten Tätigkeiten und gewünschten Elemente müssen in einem Protokoll zusammengefasst werden. Die Fragestellungen sollen ebenfalls in diesem Dokument bearbeitet werden.</p>
+<p>Das Protokoll ist eingescannt als ein <strong>PDF</strong> File auf moodle abzugeben.</p>
+<p><u>Ergänzende Hinweise zum Protokoll:</u></p>
+<p><strong>1. Dokumentation der Aufbauten</strong></p>
+<ul>
+<li>Schaltplan oder Handskizze</li>
+<li>Foto des Aufbaus</li>
+<li>verwendete Bauteile</li>
+<li>kurze Beschreibung des Versuchs</li>
+</ul>
+<p><strong>2. Berechnungen</strong></p>
+<p>Jede Berechnung muss enthalten:</p>
+<ul>
+<li>Formel</li>
+<li>Einsetzen der Werte</li>
+<li>Rechenweg</li>
+<li>Ergebnis mit Einheit</li>
+</ul>
+<p><strong>3. Messprotokoll</strong></p>
+<ul>
+<li>alle relevanten Messwerte</li>
+<li>Vergleich zwischen Theorie und Praxis</li>
+</ul>
+<p><strong>4. Beobachtungen</strong></p>
+<p>Zu jedem Versuch:</p>
+<ul>
+<li>Was wurde beobachtet?</li>
+<li>Entsprach das Ergebnis den Erwartungen?</li>
+<li>Gab es Besonderheiten oder Fehlerquellen?</li>
+</ul>
+<p><strong>5. Auswertung</strong></p>
+<p>Beantworte die Auswertungsfragen vollständig und in ganzen Sätzen.</p>
+<p><strong>6. Abschlussreflexion</strong></p>
+<p>Verfasse eine kurze Zusammenfassung (ca. ½ Seite):</p>
+<h2 id="bewertung">Bewertung</h2>
+<p>Gruppengrösse: 1 Person</p>
+<h4 id="grundanforderungen-uberwiegend-erfullt">Grundanforderungen überwiegend erfüllt</h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Protokoll über die Aufgaben- und Fragestellungen</li>
+</ul>
+<h4 id="grundanforderungen-zur-ganze-erfullt">Grundanforderungen zur Gänze erfüllt</h4>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Abgabegespräch über die Aufgaben- und Fragestellungen</li>
+</ul>
+<h2 id="quellen">Quellen</h2>
+<ul>
+<li>Das Franzis Handbuch Elektronik, Burkhard Kainka, Franzis Verlag GmbH, 2014 (Kapitel 4 Transistor Grundschaltungen)</li>
+<li>Fachkunde Industrieelektronik und Informationstechnik (Schulbuch), Europa Lehrmittel</li>
+<li><a href="https://www.elektronik-fibel.de/">Elektronik-Fibel, Patrick Schnabel</a> - letzter Abruf 20.9.2026</li>
+<li><a href="https://elearning.tgm.ac.at/mod/resource/view.php?id=12413">Machs einfach, Handbuch Grundkurs Elektronik, Francis</a> -  letzter Abruf 20.9.2026</li>
+<li><a href="https://www.falstad.com/circuit/circuitjs.html">Circuit Simulator Falstad</a> - letzter Abruf 20.9.2026</li>
+<li><a href="https://www.elektronik-kompendium.de/sites/grd/1006011.htm">Vorwiderstand für LED berechnen "elektronik-kompendium"</a> -  letzter Abruf 20.9.2026</li>
+</ul>
+<h2 id="pre-read-material">Pre-Read Material</h2>
+<table>
+<thead>
+<tr>
+<th>Datei</th>
+<th>Typ</th>
+<th>Größe</th>
+<th>Geändert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📕 <a href="PreRead-Published/PreRead%20Material%20-%20Transistor.pdf">PreRead Material - Transistor.pdf</a></td>
+<td>.pdf</td>
+<td>2.0 MB</td>
+<td>2026-09-24 16:18</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attachments">Attachments</h2>
+<table>
+<thead>
+<tr>
+<th>Datei</th>
+<th>Typ</th>
+<th>Größe</th>
+<th>Geändert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📕 <a href="Attachments/BC547.pdf">BC547.pdf</a></td>
+<td>.pdf</td>
+<td>43.91 KB</td>
+<td>2026-09-24 16:18</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>a06c3d9 Sep 24, 2026 18:18:31 by Berndt Sevcik</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["header.autohide"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../extra.js"></script>
+      
+        <script src="../../iframe-resize.js"></script>
+      
+    
+  </body>
+</html>
