@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/ti_2_1_ger_web.html#1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="chrome-extension://gehmmocbbkpblljhkekmfhjpfbkclbph/content/pageScripts/dashlane-webkit-animation-page-script.js" id="dashlane_webkit_animation"></script><script src="chrome-extension://gehmmocbbkpblljhkekmfhjpfbkclbph/content/pageScripts/dashlane-shadow-dom-page-script.js" id="dashlane_shadow_dom"></script><script src="chrome-extension://gehmmocbbkpblljhkekmfhjpfbkclbph/content/pageScripts/dashlane-webauthn-page-script.js" id="dashlane_webauthn" name="forward_webauthn_ready"></script>
+  <!-- Slide (web, intern, german) -->
+  <title>Technische Informatik, Teil 2, Kapitel 1</title>
+  <!-- Slide (web, intern, english, german) -->
+
+  
+  <script src="./Zaehler_files/jquery-1.7.2.min.js.Herunterladen"></script>
+  <script src="./Zaehler_files/pccanvas.js.Herunterladen"></script>
+  <script src="./Zaehler_files/slides.js.Herunterladen"></script>
+
+  <!-- Slide (web, intern, german, english) -->
+
+  <script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
+  <script type="text/javascript" src="./Zaehler_files/MathJax.js.Herunterladen"></script>
+  <!--[if lt IE 9]>
+    <script>
+    document.createElement('article');
+    document.createElement('aside');
+    alert("WARNING: Your browser does not support basic HTML5 features.");
+    </script>
+    <![endif]-->
+
+  <!-- start basecounter related -->
+  <script src="./Zaehler_files/basecounter.js.Herunterladen"></script>
+  <script type="text/javascript">
+    var baseCounter;
+    $(function () {
+      baseCounter = new BaseCounter("myBaseCounter", 0);
+      baseCounter.init();
+    });
+
+    function base1Changed() {
+      var d = document.getElementById("select_base1_id").value;
+      baseCounter.setBase1(d);
+    }
+
+    function base2Changed() {
+      var d = document.getElementById("select_base2_id").value;
+      baseCounter.setBase2(d);
+    }
+  </script>
+  <style type="text/css">
+    .digit {
+      font-size: 32pt;
+      display: inline-block;
+      width: 20px;
+      min-height: 20px;
+      border: 1px solid black;
+      padding: 5px;
+    }
+
+    .digitvalue {
+      color: red;
+    }
+
+    .digitrow {
+      vertical-align: bottom;
+      width: 600px;
+    }
+  </style>
+  <!-- end basecounter related -->
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuTitle {background-color: #CCCCCC; margin: -1px -1px 1px -1px; text-align: center; font-style: italic; font-size: 80%; color: #444444; padding: 2px 0; overflow: hidden}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><meta name="viewport" content="width=1100,height=750"><meta name="apple-mobile-web-app-capable" content="yes"><style type="text/css">.fsd-overlay{background-color:#e6e7ea!important;width:100vw!important;height:100vh!important;position:fixed!important;top:0!important;left:0!important;font-family:Arial,serif!important;align-items:center!important;z-index:100000000000000000!important;font-size:16px!important}.fsd-overlay,.fsd-wrapper{display:flex!important;justify-content:center!important}.fsd-texts{width:350px!important;color:#000!important}.fsd-image{margin-right:1em!important}.fsd-ignore-fraud{color:#3d8ca1!important;cursor:pointer!important;margin-top:1em!important}.fsd-ignore-fraud:hover{color:#82adb9!important}</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap ! important}
+.MathJax img {display: inline ! important; float: none ! important}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block; overflow: hidden; width: 1px; height: 60ex}
+.MathJax .MathJax_EmBox {display: block; overflow: hidden; width: 1px; height: 60em}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">@font-face {font-family: MathJax_Typewriter; src: url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff') format('woff'), url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf') format('opentype')}
+</style><style type="text/css">@font-face {font-family: MathJax_AMS; src: url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('https://www.mathematik.uni-marburg.de/~thormae/lectures/ti1/MathJax/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')}
+</style></head>
+
+<body style="display: none" class="loaded"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+
+
+  <div class="slides template-mpii">
+
+    <!--
+      <audio class="slides-media-playonclick media mediacommentaudio mediacommentinvisble" controls>
+        <source src="http://playground.html5rocks.com/samples/html5_misc/rushus-modal_blues.mp3" type="audio/mpeg" />
+        <source src="http://playground.html5rocks.com/samples/html5_misc/rushus-modal_blues.ogg" type="audio/ogg" />
+        Audio tag not supported
+      </audio>
+
+      <video class="slides-media-playonclick media mediacommentvideo mediacommentinvisble" controls>
+        <source src="http://www.html5rocks.com/en/tutorials/video/basics/Chrome_ImF.ogv" type='video/ogg; codecs="theora, vorbis"' />
+        <source src="http://www.808.dk/pics/video/gizmo.mp4" type="video/mp4" />
+      </video>
+      -->
+    <!-- Slide (web, intern, german, english) -->
+    <article data-slide-num="14" data-total-slides="31" id="14" class="far-next">
+      <div class="slidetitle">
+        <!-- Slide (web, intern, german) -->
+        <h3>Zahlensysteme mit verschiedenen Basen</h3>
+        <!-- Slide (web, intern, german, english) -->
+      </div>
+      <div class="slidebody">
+        <ul>
+          <li>
+            <!-- Slide (web, intern, german) -->
+            Dies ist ein interaktiver Zähler. Durch Klicken auf den Zähler wird die Zahl erhöht:
+
+            <!-- Slide (web, intern, german, english) -->
+
+            <div id="myBaseCounter" class="mediumTopMargin"></div>
+			<!-- <div>
+			  <div class="digitrow">
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitvalue">0</span>(10)
+			  </div>
+			  <div class="digitrow">
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitleading">0</span>
+			    <span class="digit digitvalue">0</span>(2)
+			  </div>
+			 </div>
+			</div>
+            -->
+            <p class="mediumTopMargin">
+              <button type="button" onclick="baseCounter.increment();">+</button>
+              <button type="button" onclick="baseCounter.decrement();">-</button>
+              <button type="button" onclick="baseCounter.reset();">Reset</button>
+            </p>
+          </li>
+
+        </ul>
+        <ul class="mediumTopMargin">
+          <li>
+            <!-- Slide (web, intern, german) -->
+            Es können verschiedene Basen ausgewählt werden:
+
+            <!-- Slide (web, intern, german, english) -->
+
+            <p class="mediumTopMargin">
+              <!-- Slide (web, intern, german) -->
+              Basis (oben):
+              <!-- Slide (web, intern, german, english) -->
+              <select onchange="base1Changed();" id="select_base1_id">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10" selected="">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+              </select>
+
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <!-- Slide (web, intern, german) -->
+              Basis (unten):
+              <!-- Slide (web, intern, german, english) -->
+
+
+              <select onchange="base2Changed();" id="select_base2_id">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+              </select>
+            </p>
+          </li>
+          <li>
+            <!-- Slide (web, intern, german) -->
+            Beobachtung: Kleine Basen benötigen zwar ein kleineres Alphabet, aber dafür mehr Stellen
+            <!-- Slide (web, intern, german, english) -->
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Slide (web, intern, english, german) -->
+  <div class="slide-area" id="prev-slide-area"></div><div class="slide-area" id="next-slide-area"></div></div>
+
+
+<link rel="stylesheet" type="text/css" href="./Zaehler_files/stylesheet.css"><link rel="stylesheet" type="text/css" href="./Zaehler_files/stylesheet(1).css"><link rel="stylesheet" type="text/css" id="myToggleStyle" href="./Zaehler_files/styles3_print.css"><link rel="stylesheet" type="text/css" href="./Zaehler_files/styles3_all.css"><script type="text/javascript" src="./Zaehler_files/prettify.js.Herunterladen"></script><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: MathJax_Size1, sans-serif;"></div></body></html>
