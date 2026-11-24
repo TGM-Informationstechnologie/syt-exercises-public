@@ -1,0 +1,84 @@
+html {
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  overflow-x: auto;
+  overflow-y: scroll;
+  width: 1020px;
+  display: block !important;
+}
+.slides {
+}
+
+.slides > article {
+	
+  display: inline-block; 
+  margin: 25px 0px 50px 80px;
+  page-break-after: always;
+   
+  overflow: visible;
+
+  width: 900px;
+  height: 675px;
+
+  padding: 0px 60px;
+
+  /*border-style:solid;
+  border-color:red;*/
+
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -o-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+
+  background-color: white;
+
+  border: 2px solid black;
+}
+
+/* Slides */
+
+.slides > article {
+  display: inline-block;
+  position: relative;
+  /*-webkit-transform-origin: 0 100%;*/
+}
+.slides > article.far-past {
+  display: inline-block;
+}
+.slides > article.past {
+  display: inline-block;
+}
+.slides > article.current {
+  display: inline-block;
+}
+.slides > article.next {
+  display: inline-block;
+}
+.slides > article.far-next {
+  display: inline-block;
+}
+
+.to-build {
+  opacity: 1;
+}
+
+.removehack-hidden {
+
+}
+
+.onlyInPrint {
+ display:inline-block;
+}
+
+.onlyInWeb {
+  display:none;
+}

@@ -1,0 +1,83 @@
+// Copyright (C) Thorsten Thormaehlen, Marburg, 2013, All rights reserved
+// Contact: www.thormae.de
+
+// This software is written for educational (non-commercial) purpose. 
+// There is no warranty or other guarantee of fitness for this software, 
+// it is provided solely "as is". 
+
+function BaseCounter(parentDivId, type) {
+  var myDiv;
+  var divId = parentDivId; 
+  var counter = 0;
+  var base1 = 10;
+  var base2 = 2;
+  var that = this;
+  
+  this.init = function() {
+    myDiv = document.createElement('div');
+    if(!myDiv) console.log("BaseCounter error: can not create a canvas element");
+    document.body.appendChild(myDiv);
+    var parent = document.getElementById(divId);
+    if(!parent) console.log("BaseCounter error: can not find an element with the given name: " + divId);
+    parent.appendChild(myDiv);
+    myDiv.onmousedown = function(event) {
+      myDivMouseDown(event);
+    };  
+    this.update();
+  };
+
+  this.increment = function() {
+    counter++;
+    this.update();
+  };
+
+  this.decrement = function() {
+    if(counter > 0) counter--;
+    this.update();
+  };
+
+  this.reset = function() {
+    counter = 0;
+    this.update();
+  };
+
+  this.setBase1 = function(base) {
+    base1 = base;
+    this.update();
+  };
+
+  this.setBase2 = function(base) {
+    base2 = base;
+    this.update();
+  };
+
+  this.update = function() {
+    var res1 = counter.toString(base1);
+    var res2 = counter.toString(base2);
+    var html1 = "";
+    var digits = 15;
+    for(var a=0; a < digits; a++) {
+      if(a < res1.length) {
+        html1 = "<span class='digit digitvalue'>"+res1.charAt(res1.length-1-a)+"</span>" + html1;
+      }else{
+        html1 = "<span class='digit digitleading'>0</span>" + html1;
+      }
+    }
+    var html2 ="";
+    for(var a=0; a < digits; a++) {
+      if(a < res2.length) {
+        html2 = "<span class='digit digitvalue'>"+res2.charAt(res2.length-1-a)+"</span>" + html2;
+      }else{
+        html2 = "<span class='digit digitleading'>0</span>" + html2;
+      }
+    }
+    var html = "<div class='digitrow'>" + html1 + "(" + base1 + ")</div>";
+    html += "<div class='digitrow'>" + html2 + "(" + base2 + ")</div>";
+    myDiv.innerHTML = html;
+  };
+
+  function myDivMouseDown(event) {
+      counter++;
+      that.update();
+  }
+}

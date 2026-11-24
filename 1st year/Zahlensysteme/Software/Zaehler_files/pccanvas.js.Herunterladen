@@ -1,0 +1,173 @@
+/**
+ * Code to create dynamic canvas above all other element in a html page.
+ * F. Permadi, 2009
+ * http://www.permadi.com 
+ *
+ * This code is made available for educational purpose comes with no warranty.  Use at your own risk.
+ * 
+ * Thorsten Thormaehlen (added several features that I needed)
+ * 
+ */
+var myCanvas;
+var lastX = -1;
+var lastY = -1;
+var lastForce = 0.5;
+var colorId = 0;
+
+var colors = ["0,255,0", "0,0,255", "255,0,0", "0,0,0"];
+
+function toggleCanvasOverlayColor() {
+  colorId++;
+}
+
+function createCanvasOverlay(color, canvasContainer)
+{
+  if (!myCanvas)
+  {
+    if (!canvasContainer)
+    {
+      canvasContainer = document.createElement('div'); 
+      document.body.appendChild(canvasContainer);
+      canvasContainer.style.position="absolute";
+      canvasContainer.style.left="0px";
+      canvasContainer.style.top="0px";
+      
+      var w = window.screen.width;
+      var h = window.screen.height;
+      
+      canvasContainer.style.width= w + "px";
+      canvasContainer.style.height= h + "px";
+      canvasContainer.style.zIndex="1000";
+      //canvasContainer.style.border="2px solid rgb(0,255,0)";
+      canvasContainer.style.cursor = 'crosshair';
+	  //canvasContainer.style.cursor = 'pointer';
+	  
+      superContainer=document.body;
+    }
+    else
+      superContainer=canvasContainer;
+
+    // Part of block below is inspired by code from Google excanvas.js
+    {
+      myCanvas = document.createElement('canvas');   
+      
+      var w = window.screen.width;
+      var h = window.screen.height;
+    
+      myCanvas.style.width =  w + "px";
+      myCanvas.style.height = h + "px";
+      // You must set this otherwise the canvas will be streethed to fit the container
+      myCanvas.width= w * 2;
+      myCanvas.height= h * 2;    
+      //surfaceElement.style.width=window.innerWidth; 
+      myCanvas.style.overflow = 'visible';
+      myCanvas.style.position = 'absolute';
+    }
+
+    var context=myCanvas.getContext('2d');
+    context.fillStyle = color;
+    context.fillRect(0,0, myCanvas.width, myCanvas.height);
+    canvasContainer.appendChild(myCanvas);
+    context.lineJoin = 'round';   
+    myCanvas.addEventListener('mousemove', onMouseMoveOnMyCanvas, false); 
+    myCanvas.addEventListener('mousedown', onMouseDownOnMyCanvas, false); 
+    myCanvas.addEventListener('mouseup', onMouseUpOnMyCanvas, false); 
+    
+    myCanvas.addEventListener("touchstart", onMouseDownOnMyCanvas, false);
+    myCanvas.addEventListener("touchmove", onMouseMoveOnMyCanvas, false);
+    myCanvas.addEventListener("touchend", onMouseUpOnMyCanvas, false);
+    
+    //alert(myCanvas);
+  } else {
+    myCanvas.parentNode.style.visibility='visible';
+    var context=myCanvas.getContext('2d');
+    context.clearRect(0,0, myCanvas.width, myCanvas.height);
+  }
+}
+function onMouseDownOnMyCanvas(event) {
+  myCanvas.drawing = true;
+  var mouseX;
+  var mouseY;
+  var force = 0.5;
+  
+  if (event.type === "touchstart") {
+    mouseX = event.touches[0].pageX;
+    mouseY = event.touches[0].pageY;
+    force = event.touches[0].force;
+  } else {
+    mouseX = event.layerX;
+    mouseY = event.layerY;
+  }
+  
+  console.log("mouse down: x:" + mouseX + " y:" + mouseY + " f:" + force);
+  
+  lastX = mouseX;
+  lastY = mouseY;
+  lastForce = force;
+  event.preventDefault();
+}
+
+function onMouseMoveOnMyCanvas(event) {
+  if (myCanvas.drawing && lastX >= 0 && lastY >= 0)
+  {
+    var mouseX;
+    var mouseY;
+    var force = 0.5;
+  
+    if (event.type === "touchmove") {
+      mouseX = event.touches[0].pageX;
+      mouseY = event.touches[0].pageY;
+      force = event.touches[0].force;
+    } else {
+      mouseX = event.layerX;
+      mouseY = event.layerY;
+    }
+
+	if(event.shiftKey) { // draw straight line
+	  mouseY = lastY;
+	}
+	if(event.ctrlKey) { // draw straight line
+	  mouseX = lastX;
+	}
+
+    console.log("mouse move : x:" + mouseX + " y:" + mouseY + " f:" + force);
+    
+    var context = myCanvas.getContext("2d");
+    context.beginPath();
+    context.lineJoin = "round";
+    var opacity = 0.5 + force;
+    var colorStr = colors[colorId % colors.length];
+    context.strokeStyle = 'rgba(' + colorStr + ',' + opacity + ')';  // a green line
+    context.lineWidth = 2 + force * 10;                 // 7 pixels thickness  
+    context.moveTo(lastX * 2, lastY * 2);
+    context.lineTo(mouseX * 2, mouseY * 2);
+    context.closePath();
+    context.stroke();
+
+    lastX = mouseX;
+    lastY = mouseY;
+    lastForce = force;
+  }
+  event.preventDefault();
+}
+
+
+
+function onMouseUpOnMyCanvas(event) {
+  myCanvas.drawing= false;
+  lastX = -1;
+  lastY = -1;
+  lastForce = 0.5;
+  console.log("mouse up");
+  event.preventDefault();
+}
+
+
+function hideCanvas() {
+  if (myCanvas)
+  {
+    myCanvas.parentNode.style.visibility='hidden';
+  }
+}
+
+ 
